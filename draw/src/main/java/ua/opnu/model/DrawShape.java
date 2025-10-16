@@ -36,8 +36,8 @@ public class DrawShape {
 
     // Конструктор з початковими координатами
     public DrawShape(Point startPoint, Point endPoint) {
-        this.startPoint = startPoint;
-        this.endPoint = endPoint;
+        this.startPoint = new Point(startPoint);
+        this.endPoint = new Point(endPoint);
     }
 
     // Метод повертає фігуру, яку можна намалювати
@@ -51,10 +51,10 @@ public class DrawShape {
     }
 
     public void setStartPoint(Point startPoint) {
-        this.startPoint = startPoint;
+        this.startPoint = new Point(startPoint);
     }
 
     public void setEndPoint(Point endPoint) {
-        this.endPoint = endPoint;
+        this.endPoint = new Point(endPoint);
     }
 }

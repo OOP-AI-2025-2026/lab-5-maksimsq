@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class MainFrame extends JFrame implements ActionListener {
+    private static final Random RANDOM = new Random();
 
     public MainFrame(String title) throws HeadlessException {
         super(title);
@@ -43,7 +44,7 @@ public class MainFrame extends JFrame implements ActionListener {
         // Метод повертає об'єкт ігрової фігури (камінь, ножиці чи папір)
         // випадковим чином
 
-        int random = new Random().nextInt(3);
+        int random = RANDOM.nextInt(3);
 
         switch (random) {
             case 0:
@@ -113,6 +114,9 @@ public class MainFrame extends JFrame implements ActionListener {
                 break;
             case 1:
                 message += "Player has won!";
+                break;
+            default:
+                break;
         }
 
         // Вивести діалогове вікно з повідомленням
